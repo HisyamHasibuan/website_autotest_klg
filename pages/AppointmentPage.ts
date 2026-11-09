@@ -53,7 +53,10 @@ export class AppointmentPage {
     await this.page.locator(`input[name="programs"][value="${data.program}"]`).click();
 
     if (data.visitDate) {
-      await this.visitDateInput.fill(data.visitDate);
+      // Datepicker clears normal fill(), so set the value directly
+      await this.visitDateInput.evaluate((el, date) => {
+        (el as HTMLInputElement).value = date;
+      }, data.visitDate);
     } else {
       await this.visitDateInput.fill('');
     }
