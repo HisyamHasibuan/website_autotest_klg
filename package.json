@@ -1,0 +1,17 @@
+{
+  "name": "website_autotest_klg",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript Page Object Model automation suite for Katalon Demo CURA",
+  "author": "Hisyam Hasibuan",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
