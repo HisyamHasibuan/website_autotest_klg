@@ -1,27 +1,12 @@
 # website_autotest_klg
 
-Otomasi pengujian web menggunakan Playwright dan TypeScript dengan arsitektur Page Object Model (POM) untuk aplikasi web [Katalon Demo CURA](https://katalon-demo-cura.herokuapp.com/).
+Web test automation using Playwright and TypeScript with Page Object Model (POM) for the [Katalon Demo CURA](https://katalon-demo-cura.herokuapp.com/) web app.
 
 Author: **Hisyam Hasibuan**
 
 ---
 
-## Struktur Folder
-```
-├── pages/
-│   ├── LoginPage.ts         # Page Object Login & Auth
-│   └── AppointmentPage.ts   # Page Object Appointment & Summary
-├── tests/
-│   └── cura.spec.ts         # Skenario pengujian (Auth & Decision Table)
-├── playwright.config.ts     # Konfigurasi runner Playwright
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
----
-
-## Daftar Skenario Uji (Test Scenarios)
+## Test Scenarios
 1. **TC_AUTH_01**: Verify successful login with valid credentials
 2. **TC_AUTH_02**: Verify login fails with invalid username
 3. **TC_AUTH_03**: Verify login fails with invalid password
@@ -33,24 +18,24 @@ Author: **Hisyam Hasibuan**
 
 ---
 
-## Cara Menjalankan di Komputer Lokal
+## How to Run Locally
 
-1. Install dependensi:
+1. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Install browser Playwright:
+2. Install Playwright browsers:
    ```bash
    npx playwright install
    ```
 
-3. Eksekusi pengujian:
-   - Headless:
+3. Run the tests:
+   - Headless (no browser window):
      ```bash
      npm test
      ```
-   - Headed (Browser terbuka):
+   - Headed (browser window open):
      ```bash
      npm run test:headed
      ```
@@ -58,7 +43,7 @@ Author: **Hisyam Hasibuan**
      ```bash
      npm run test:ui
      ```
-   - Laporan pengujian:
+   - View test report:
      ```bash
      npm run report
      ```
